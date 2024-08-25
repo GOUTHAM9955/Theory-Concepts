@@ -1,0 +1,62 @@
+HTTP vs HTTTPS vs SSL vs TLS
+
+Networking: Communication b/w two machines trought internet
+
+>> When we send a request the first thing that takes place before even interacting with the other machine is it compresses the JSON data by removing all the spaces
+>> It then coverts it into binary data
+		The need to convert the data into binary is because when we transfer the data we need a medium to transfer it
+				The tranfer type wired(with the help of electric signals or light signals through cables) or wireless (can be radio or infrared waves)
+
+		Lets say we have a bite of data: 01001011 the machine is going to send electric signals with different voltages based on the bit.In binary data transfer, the voltage levels used to represent the binary digits (0 and 1) depend on the specific technology, communication standard, or protocol being used.
+
+>> The data which is in binary format is send to the router which transfer it to the destination server. Wired connections, especially fiber optics, are the preferred and most common method for transmitting data between routers and data centers due to their reliability, speed, and capacity, wireless options can be used in specific circumstances where wiring is impractical or impossible.
+	
+>> If we are using HTTP protocol while transfering the data, the binary data can be intercepted and converted to machine redable language
+
+>> So HTTPS came in place in which
+		We take an encription algorithm like SHA or AES256 and encrypt it with the help of a key. We can use the same algorithm and key to decrypt it back.
+
+		-> We send the key along with the encrypted data to the client so that they can access it this is called symetric encryption which still isn't safe since we are sending the key along with encrypted data and using same key to encrypt and decrypt the data. To overcome this we use assymetric encryption
+
+		->	In asymetric encription we use 2 keys public and private key. Public key to encrypt and private key to decrypt or vice-versa.
+				In this asymetric encription if we want to send data to a server from browser we first let the server know that we are going to send data and the server sends its public key to us.
+				With this public key we encrypt the client symetric key and sent it along the data to the client. Server decrypts the clients symetric key using it's private key and decrypt's the data.
+
+			->	The drawback with this mechanism is the intial request to ask for public key can be intercepted and the hacker can send his own public key this is called man in the middle attack. And the hacked will be having your decrypted symetric key and he can use this to decode all your communication.
+
+
+				-> To overcome this we need to have a mechanism that ensures the public key is form the server. This is done by certificate authority.
+
+					There are only few certificate authorities that are approved by the browsers.
+
+					Just like the assymetric encryption, certificates will have their own public and private keys. Public keys are open to the entire world and private keys are accesable only to the certificate authorities. 
+
+					Now with the help of certificate authorities, instead of sending the public key directly to the client the server sends the key to the certificate authorities. The certificate autority creates a certificate(which is a typical text file) which consists of 3 parts
+						1) Issued to(Server details), Issued by(certificate provider details)
+						2) Server public key
+						3) It will then encrypt the server public key with certificate authority private key and have the encryped server public key which contains all the information this is called the signature.
+
+				-> Now the generated certificate is send to server and the server sends it back to the client
+
+				-> The client will look at the certificate and will request for public key from the certificate provider and decrypt the signature using that public key of certificate provider
+
+				-> The client will validate if the decryped server public key is same as the public key sent in the certificate
+
+
+				>> Chain of trust
+					To make the private key to isolate as far as possible from the internet, we have intermediate certificate authority which generates a signature and will reach out to the actual certificate autority(root certificate)and gereate signature on top of it. This process is called chain of trust
+
+					Steps:
+						The server certificate is validated as so. 
+							1) The server certificate will have ower info as server address, issuer info as intermediate certificate.
+							2) The client fetches intermediate certificate public key and decrypts the signature and validate it
+							3) Before that we need to validate the intermediate certificate too. So we take it's signate and check the issuer info which is root certificate and with root's public key we are going to decrypt the signature and validate it. 
+							4) We also have to validate the root certificate too, for that we decrypt using it's own public key and check if the owner info is same as the issuer info.
+
+				>> Only after all these certificates are validated we will be having a secured HTTPS connection
+
+Try it:
+	Go to any secured HTTP connection, click on lock and then go into connection is valid and then certificate is valid
+	When we click on it, it gives more info about the certificate
+
+

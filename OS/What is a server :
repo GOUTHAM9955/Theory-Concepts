@@ -1,0 +1,20 @@
+What is a server :
+	A server is a powerful computer or software system that provides services, resources, or data to other computers, known as clients, over a network. Servers are integral to various computing environments, from small local networks to large-scale internet services.
+
+	Servers can be classified into 2 types
+			Physical servers: With dedicated CPU and RAM
+			Virtual servers: : Use Hyperwiser to divide physical server into 2 or more virtual servers
+			Using RAID configuration we prevent data loss incase of a hard disc failure as it copies the data into multiple desks and would rebuild the data into new hard drives
+			A server needs an OS to run ex: Windows, Linux or MAC which should be robust and stable.
+
+
+	•	Web Server: Hosts websites and serves web pages(static webpages) to clients (browsers). Examples include Apache HTTP Server, Nginx, and Microsoft IIS.
+	•	Database Server: Manages and provides access to databases. Examples include MySQL, Microsoft SQL Server, and Oracle Database.
+	•	File Server: Stores and manages files, allowing clients to upload, download, and access files over a network.
+	•	Application Server: Hosts and runs applications, often providing business logic for web applications. Examples include Oracle WebLogic, JBoss, and Apache Tomcat.
+	•	Mail Server: Manages and transfers emails. Examples include Microsoft Exchange, Postfix, and Sendmail.
+	•	FTP Server: Manages file transfers between computers using the File Transfer Protocol (FTP).
+	•	Proxy Server: Acts as an intermediary between clients and other servers, often used for security, filtering, or caching.
+	•	DNS server: For resolving domain names
+
+	Webserver vs Application Server:

@@ -1,0 +1,33 @@
+Oracle WebLogic Servers:
+	Weblogic servers are application servers from Oracle which is used to host enterprise level JAVA applications.
+	This is purely used to deploy JAVA based applications.
+	Weblogic server has the capability to act as a webserver as well as application server
+
+
+Usually this is the flow
+							Session Stickiness
+							Distributing Traffic
+							SSL Termination				(Static Web Pages)  (Business Logic)
+	User sends request ----LoadBalancer------> Webserver------> Application Serrver
+												|					|
+												|					|
+												|					|
+												v 					v
+											Data base           Data Base 
+
+
+	In Oracle WebLogic Server, the Administration Server is the central management point responsible for configuring and managing the domain, while Managed Servers are responsible for running applications and handling client requests. The Administration Server is unique and critical for domain management, whereas Managed Servers can be numerous, clustered, and focused on executing the business logic and serving user requests.
+
+	the context of admin console is "/console" followd by web logic host and port
+
+	if we have multiple applications which we specify in DNS with /application ex: hhts//:gouthamk/marksList
+		we specify it in the config file with < Location /markList >
+												SetHandler weblogic-handler
+												WebLogicCluster Ip address of all manage servers followed by their port numbers
+												/Location>
+
+	Connection Pool: It is the pool of ready to use connections to get access to the databases
+
+	Domain: 
+		In WebLogic Server, a domain is an organized collection of server instances, resources, and configurations that are managed together as a single unit. It includes an Administration Server for management tasks and one or more Managed Servers for running applications and services. Domains provide a structured and scalable way to manage complex enterprise applications and resources within WebLogic Server.
+
