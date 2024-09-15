@@ -1,0 +1,119 @@
+>> Local Network Types:
+
+	Small Home Networks
+		Small home networks connect a few computers to each other and to the internet.
+
+	Small Office and Home Office Networks
+		The SOHO network allows computers in a home office or a remote office to connect to a corporate network, or access centralized, shared resources.
+
+	Medium to Large Networks
+		Medium to large networks, such as those used by corporations and schools, can have many locations with hundreds or thousands of interconnected hosts.
+
+	World Wide Networks
+		The internet is a network of networks that connects hundreds of millions of computers world-wide.
+
+
+>> Types of Data:
+
+ 	Voluntered Data: Volunteered data refers to information that is intentionally and willingly provided by individuals or organizations. It is typically offered through surveys, forms, social media profiles, or any scenario where a person consciously shares personal or non-personal information.
+
+	Characteristics of Volunteered Data:
+
+	1.	Consciously Shared: The individual actively decides to provide the information, knowing it will be used for a specific purpose.
+	2.	Explicit Consent: Volunteered data is usually collected with the individual’s consent, often through platforms where they control what information they share.
+	3.	Personal or Public Information: It can range from personal details like contact information or preferences to public data like opinions shared on social media.
+
+ 	
+ 	Infered Data: Inferred data is information that is derived, deduced, or predicted based on existing data, often using algorithms, statistical models, or machine learning.
+	•	How It’s Generated: It is created by analyzing observed data and drawing conclusions or predictions about patterns, trends, or relationships that are not explicitly observed.
+	•	Examples:
+	•	Predicting a customer’s future purchase preferences based on their past buying behavior.
+	•	Inferring someone’s income based on their job title and location.
+	•	Recommending movies on a streaming platform based on a user’s previous viewing history.
+	•	A credit score inferred based on various observed financial behaviors.
+
+
+ 	
+ 	Observed Data : Observed data refers to information that is directly recorded or measured from real-world events or behaviors.
+	•	How It’s Collected: It is captured through sensors, logs, surveys, transactions, or human observation.
+	•	Examples:
+	•	The temperature recorded by a thermometer.
+	•	Website traffic measured by a web analytics tool.
+	•	A customer’s actual purchase behavior in a store.
+	•	GPS data collected from a vehicle’s movement.
+
+
+>> The Bit :
+		All of our data is stored and transmitted as a series of bits. Each bit can only have one of two possible values, 0 or 1. The term bit is an abbreviation of “binary digit” and represents the smallest piece of data. A bit is stored and transmitted as one of two possible discrete states. This can include two directions of magnetization, two distinct voltage or current levels, two distinct levels of light intensity, or any other physical system of two discrete states. For example, a light switch can be either On or Off; in binary representation, these states would correspond to 1 and 0 respectively.
+
+		Each group of eight bits, such as the representations of letters and numbers, is known as a byte.
+
+
+
+>> Common Method Of Data Transfer :
+	There are three common methods of signal transmission used in networks:
+		Electrical signals - Transmission is achieved by representing data as electrical pulses on copper wire.
+		Optical signals - Transmission is achieved by converting the electrical signals into light pulses.
+		Wireless signals - Transmission is achieved by using infrared, microwave, or radio waves through the air.
+
+
+>> Bandwidth:
+	Bandwidth refers to the maximum amount of data that can be transmitted over a network connection or communication channel in a given period of time. It is typically measured in bits per second (bps), and its common units include kilobits per second (Kbps), megabits per second (Mbps), and gigabits per second (Gbps).
+
+	Key Concepts Related to Bandwidth:
+
+		1.	Data Transfer Rate:
+		•	Bandwidth measures the rate at which data can be transferred from one point to another over a network.
+		•	For example, a bandwidth of 100 Mbps means that up to 100 megabits of data can be transmitted every second.
+		2.	Capacity:
+		•	Bandwidth is often thought of as the capacity of a network or communication channel. The larger the bandwidth, the more data can be sent and received simultaneously.
+		3.	Not Latency:
+		•	Bandwidth is different from latency, which is the delay or time it takes for data to travel from the source to the destination.
+		•	High bandwidth means more data can travel at once, while low latency means data can travel faster.
+		4.	Shared vs. Dedicated Bandwidth:
+			•	In many network setups, bandwidth is shared among users (e.g., home internet connections, Wi-Fi networks), meaning actual speeds may vary based on network traffic.
+			•	Dedicated bandwidth refers to a guaranteed amount of bandwidth for a specific user or service.
+
+
+>> Throughput
+
+	Like bandwidth, throughput is the measure of the transfer of bits across the media over a given period of time. However, due to a number of factors, throughput does not usually match the specified bandwidth. Many factors influence throughput including:
+
+	The amount of data being sent and received over the connection
+	The types of data being transmitted
+	The latency created by the number of network devices encountered between source and destination
+	Latency refers to the amount of time, including delays, for data to travel from one given point to another.
+
+	Throughput measurements do not take into account the validity or usefulness of the bits being transmitted and received. Many messages received through the network are not destined for specific user applications. An example would be network control messages that regulate traffic and correct errors.
+
+	In an internetwork or network with multiple segments, throughput cannot be faster than the slowest link of the path from sending device to the receiving device. Even if all or most of the segments have high bandwidth, it will only take one segment in the path with lower bandwidth to create a slowdown of the throughput of the entire network.
+
+	There are many online speed tests that can reveal the throughput of an internet connection.
+
+
+>> Peer to Peer Networks:
+	Client and server software usually run on separate computers, but it is also possible for one computer to run both client and server software at the same time. In small businesses and homes, many computers function as the servers and clients on the network. This type of network is called a peer-to-peer (P2P) network.
+
+The simplest P2P network consists of two directly connected computers using either a wired or wireless connection. Both computers are then able to use this simple network to exchange data and services with each other, acting as either a client or a server as necessary.
+
+Multiple PCs can also be connected to create a larger P2P network, but this requires a network device, such as a switch, to interconnect the computers.
+
+The main disadvantage of a P2P environment is that the performance of a host can be slowed down if it is acting as both a client and a server at the same time.
+In larger businesses, because of the potential for high amounts of network traffic, it is often necessary to have dedicated servers to support the number of service requests.
+
+
+>> Network Infrastructure
+	The network infrastructure contains three categories of hardware components
+		End devices : Laptop, printer etc 
+		Intermediate devices : Router, Switch, Firewall Appliance
+		Network media : LAN, WAN, Wireless media
+
+
+>> ISP(Internet service provider):
+	An Internet Service Provider (ISP) provides the link between the home network and the internet.ISPs are critical to communications across the global internet. Each ISP connects to other ISPs to form a network of links that interconnect users all over the world. ISPs are connected in a hierarchical manner that ensures that internet traffic generally takes the shortest path from the source to the destination.  The primary medium that connects the internet backbone is fiber-optic cable. This cable is typically installed underground to connect cities within continents. Fiber-optic cables also run under the sea to connect continents, countries, and cities.
+
+
+>> ISP Connenctions:
+	The interconnection of ISPs that forms the backbone of the internet is a complex web of fiber-optic cables with expensive networking switches and routers that direct the flow of information between source and destination hosts. A router is required to securely connect a computer to an ISP. This is the most common connection option. It consists of using a wireless integrated router to connect to the ISP. The router includes a switch to connect wired hosts and a wireless AP to connect wireless hosts. The router also provides client IP addressing information and security for inside hosts.
+
+
