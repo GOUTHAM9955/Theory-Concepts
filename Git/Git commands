@@ -14,6 +14,8 @@ to make changes
 >> git push 
 
 
+To remove git directory: rm -rf .git
+
 
 To update the Personal Access Token:
 	1. Log in to GitHub:
