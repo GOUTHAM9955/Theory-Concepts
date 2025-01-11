@@ -9,7 +9,7 @@ git remote add origin url >> Url of remote repository we want to connect
 git push -u origin master >> To push all the changes to the repository
 
 to make changes
->> git add.
+>> git add .
 >> git commit -m
 >> git push 
 
