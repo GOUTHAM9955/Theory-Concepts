@@ -10,7 +10,7 @@ git push -u origin master >> To push all the changes to the repository
 
 to make changes
 >> git add .
->> git commit -m
+>> git commit -m [git push origin master --force   {Don't use it}]
 >> git push 
 
 
