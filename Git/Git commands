@@ -4,7 +4,7 @@ git status >> To find the updates files
 
 git add filename or (.)>> to add individual file or multiple files in a single go we can use command 
 git commit -m "comments" >> to commit the files
-git branch -m main >> to add branch (If we don't give name it will commit to master branch)
+git branch -m main/master >> to add branch 
 git remote add origin url >> Url of remote repository we want to connect
 git push -u origin master >> To push all the changes to the repository
 
