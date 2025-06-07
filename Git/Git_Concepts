@@ -1,0 +1,66 @@
+ >> We use to have CVCS(Centralized Version Control System) for multiple SD's to work on a project in parallel.
+              Disadvantage: If the centralized server is down BOOM… and we don’t have version history in our local 
+
+>> DVCS(distributed Version Control System):  here even if the server goes down we have entire commit history in the local 
+
+
+Aspect	Centralized VCS (e.g., SVN)	Distributed VCS (e.g., Git)
+Repository Location	Central server only	Every user has a full copy
+Offline Work	Limited	Fully supported
+Collaboration	Must push/pull via server	Can share directly (P2P)
+Speed	Slower (network required)	Faster (local access)
+Backup	Single point of failure	Multiple full backups
+
+
+
+	• Centralized VCS = One master book in a library. You must go to the library to read or edit it.
+	• Distributed VCS = Every student gets their own copy of the book. They can read and annotate anytime and share notes later.
+
+
+
+>> Git Global Configurations
+
+          For configuration: git config  
+         To username and Gmail to align with GitLab or GitHub: git config --global --list 
+          To edit those: git config --global user.name/user.email "abc"
+	
+>> Git Init
+	
+   In git we have a working directory for the project we are working on and a staging directory. Git will track only the files which are in staging directory.
+   We have to push the files into staging area and we have commit history when commit these files
+  
+  git status : This command will tell if the working directory had a local repository
+		
+  git init :  In order to create a local repository for the working directory we need to run git init command on local repository  
+                  It creates a hidden folder /.git in the directory 
+                  The files in the git are not tracked until and unless we add it to the staging area 
+                  By default the name of the branch will be master
+		  git init -b main : To make the branch as master
+  rm -rf .git : To remove git from working repository 
+
+		
+		
+>> Git Commit
+       git add <filename> : To add the file to staging area
+       git add . : To add all the files to staging area
+       git commit -m <message>: To commit the files in staging area to remote repository 
+                     Every time you commit some data to git even with small change in the file git creates a new checksum out of it with SHA1 
+       git log: To give the commit history 
+       git commit -a -m <message> : To commit changes directly from working directory to remote repository skipping staging, this file won't be tracked further since it is skipping staging
+
+>> Git diff     
+     git diff : It gives the changes between the working directory file and the file that is in staging area
+     git diff --staged : It the file already in stating area and you want to track the latest changes then we use it 
+
+
+>> Git remove
+             To delete a file which is committed  
+                    1) git rm --cached <filename> : To remove the file from git then
+                    2)  Delete the file from working directory 
+                    3)  Commit the changes
+     
+       
+      
+
+  
+
